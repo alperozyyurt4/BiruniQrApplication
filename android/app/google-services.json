@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "222527263789",
+    "project_id": "biruni-qr-app",
+    "storage_bucket": "biruni-qr-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222527263789:android:407e228ffaee03cfc054a4",
+        "android_client_info": {
+          "package_name": "com.example.biruni_qr_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd8yH3tPbZidIrHTcvqNAMgbSESmq5DoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
