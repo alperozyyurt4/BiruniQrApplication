@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   bool _controllerInitialized = false;
   //* ignore: unused_field
 
-  // ignore: unused_field
+  //* ignore: unused_field
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   void _fetchDataFromFirestore() async {
@@ -34,17 +34,17 @@ class _HomePageState extends State<HomePage> {
 
       //* 'students' koleksiyonundan belirli belgeleri getir
       DocumentSnapshot documentSnapshot = await firestore.collection('students').doc(home.userName).get();
-      // Eğer belge bulunamazsa
+      //* Eğer belge bulunamazsa
       if (!documentSnapshot.exists) {
         print('Belge bulunamadı.');
         return;
       }
-      // Belgedeki veriyi al
+      //* Belgedeki veriyi al
       var name = documentSnapshot['name'];
       var surName = documentSnapshot['surname'];
       var bolumAdi = documentSnapshot['bolum'];
 
-      // State'i güncelle
+      //* State'i güncelle
       setState(() {
         home.appBarText1 = name + " " + surName;
         home.appBarText2 = bolumAdi;
@@ -110,13 +110,13 @@ class _HomePageState extends State<HomePage> {
           print('QR Kodu Okundu: $qrText');
           _showSnackBar('Yoklama alındı');
           LessonHistory.addLesson(qrText, DateTime.now().toString());
-          // Firebase Firestore referansları
+          //* Firebase Firestore referansları
           CollectionReference studentsCollection = FirebaseFirestore.instance.collection('students');
           String currentUserName = userName; // Kullanıcının adını buraya yerleştirin
           DocumentReference userDocument = studentsCollection.doc(currentUserName);
           CollectionReference yoklamalarCollection = userDocument.collection('yoklamalar');
 
-          // Belge kimliğini belirleyerek Firestore'e veri ekleme
+          //* Belge kimliğini belirleyerek Firestore'e veri ekleme
           yoklamalarCollection.doc(qrText).set({
             'ders': qrText,
             'timestamp': Timestamp.fromDate(DateTime.now()),
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
             );
           }).catchError((error) {
             print('Hata oluştu: $error');
-            // Hata durumunda kullanıcıya bilgi verebilir veya başka bir işlem yapabilirsiniz.
+            //* Hata durumunda kullanıcıya bilgi verebilir veya başka bir işlem yapabilirsiniz.
           });
         }
       }
@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
     try {
       FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-      // Sadece bu kullanıcının Firestore koleksiyonundaki verileri çek
+      //* Sadece bu kullanıcının Firestore koleksiyonundaki verileri çek
       DocumentSnapshot studentDocument = await firestore.collection('students').doc(userName).get();
       if (studentDocument.exists) {
         CollectionReference yoklamalarCollection = studentDocument.reference.collection('yoklamalar');

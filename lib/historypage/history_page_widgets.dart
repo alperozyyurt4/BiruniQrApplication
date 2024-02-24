@@ -30,11 +30,13 @@ class _HscrollState extends State<Hscroll> {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
+          //* Sort icon
           leading: IconButton(
+            color: Colors.white,
             onPressed: () {
-              // Tıklanıldığında sıralama işlemi yap
+              //* Tıklanıldığında sıralama işlemi yap
 
-              // Tersine çevir ve sayfayı yenile
+              //* Tersine çevir ve sayfayı yenile
               setState(() {
                 sorted = !sorted;
               });
@@ -42,7 +44,9 @@ class _HscrollState extends State<Hscroll> {
             icon: const Icon(Icons.list),
           ),
           actions: [
+            //* Delete icon
             IconButton(
+              color: Colors.white,
               onPressed: () {
                 showDeleteConfirmationDialog(context);
               },
@@ -54,6 +58,7 @@ class _HscrollState extends State<Hscroll> {
           pinned: true,
           backgroundColor: ColorsUtility.darkBlue,
           flexibleSpace: const FlexibleSpaceBar(
+            titlePadding: EdgeInsets.all(25),
             centerTitle: true,
             title: Text('Geçmiş'),
           ),
@@ -61,7 +66,7 @@ class _HscrollState extends State<Hscroll> {
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (context, index) {
-              // Tarih sıralamasına göre indeks belirle
+              //* Tarih sıralamasına göre indeks belirle
               int sortedIndex = sorted ? index : LessonHistory.tileStyles.length - 1 - index;
               return LessonHistory.tileStyles[sortedIndex].build(context);
             },
@@ -72,6 +77,7 @@ class _HscrollState extends State<Hscroll> {
     );
   }
 
+  //* Dersleri veritabanı ve ekrand
   void deleteHistory() async {
     try {
       QuerySnapshot querySnapshot = await _historyCollection.doc(userName).collection('yoklamalar').get();

@@ -24,11 +24,15 @@ class HelpPageHome extends StatelessWidget {
           preferredSize: const Size.fromHeight(60),
           child: AppBar(
             leading: IconButton(
+                color: Colors.white,
                 onPressed: () {
                   navi(context, const HomePage());
                 },
                 icon: const Icon(Icons.arrow_back_ios_new)),
-            title: const Text(_title),
+            title: Text(
+              _title,
+              style: TextStyle(color: ColorsUtility.whiteText),
+            ),
             backgroundColor: ColorsUtility.darkBlue,
             centerTitle: _centeredTitle,
           ),

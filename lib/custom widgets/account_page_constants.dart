@@ -16,20 +16,20 @@ class AccPageConstants {
 
   static const appBarText = 'Hesap';
 
-  // Firebase bağlantısı ve veri çekme işlemi
+  //* Firebase bağlantısı ve veri çekme işlemi
   static Future<void> fetchData() async {
     String userName = tUserName.text;
-    // Firestore bağlantısı
+    //* Firestore bağlantısı
     FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-    // Belirli bir koleksiyondan belirli bir belgeyi getirme
+    //* Belirli bir koleksiyondan belirli bir belgeyi getirme
     DocumentSnapshot documentSnapshot = await firestore.collection('students').doc(userName).get();
 
-    // Veriyi alma
+    //* Veriyi alma
     Map<String, dynamic> data = documentSnapshot.data() as Map<String, dynamic>;
 
-    // Veriyi kullanma
-    trailing1 = data['name']; // 'your_field' yerine gerçek alan adınızı kullanın
+    //* Veriyi kullanma
+    trailing1 = data['name']; //* 'your_field' yerine gerçek alan adınızı kullanın
     trailing2 = data['surname'];
     trailing3 = data['fakulte'];
     trailing4 = data['bolum'];

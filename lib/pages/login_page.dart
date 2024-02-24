@@ -44,7 +44,11 @@ class _LoginPageState extends State<LoginPage> {
                       onPressed: () {
                         naviRight(context, const HelpPageLogin());
                       },
-                      icon: Icon(Icons.help, size: scaleFactor(context, 28)),
+                      icon: Icon(
+                        Icons.help,
+                        size: scaleFactor(context, 28),
+                        color: Colors.white,
+                      ),
                     ),
                   ],
                   backgroundColor: ColorsUtility.darkBlue,

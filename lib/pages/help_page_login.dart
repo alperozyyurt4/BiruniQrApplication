@@ -21,17 +21,31 @@ class HelpPageLogin extends StatelessWidget {
       child: Scaffold(
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(60),
+
+          //*AppBar
           child: AppBar(
             leading: IconButton(
                 onPressed: () {
                   naviLeft(context, const LoginPage());
                 },
-                icon: const Icon(Icons.arrow_back_ios_new)),
-            title: const Text(_title),
+
+                //* Geri iconu
+                icon: const Icon(
+                  Icons.arrow_back_ios_new,
+                  color: Colors.white,
+                )),
+
+            //* AppBar title text
+            title: Text(
+              _title,
+              style: TextStyle(color: ColorsUtility.whiteText),
+            ),
             backgroundColor: ColorsUtility.darkBlue,
             centerTitle: _centeredTitle,
           ),
         ),
+
+        //* Body
         body: Column(
           children: [
             HelpListTile(text: HelpPageConstants.title1, subTitleText: HelpPageConstants.subtitle1),

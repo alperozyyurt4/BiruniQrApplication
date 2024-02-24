@@ -21,18 +21,24 @@ class _AccountPageState extends State<AccountPage> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: AppBar(
+          //* Back button
           leading: IconButton(
+              color: Colors.white,
               onPressed: () {
                 navi(context, const HomePage());
               },
               icon: const Icon(Icons.arrow_back_ios_new)),
           centerTitle: centeredTitle,
           backgroundColor: ColorsUtility.darkBlue?.withOpacity(0.9),
-          title: const Text(AccPageConstants.appBarText),
+          title: Text(
+            AccPageConstants.appBarText,
+            style: TextStyle(color: ColorsUtility.whiteText),
+          ),
         ),
       ),
       body: Column(
         children: [
+          //*  Ad Soyad Fakülte ve Bölüm bilgileri girilen her kullanıcı için veri firebase den çekilerek gösterilir
           ListTile(
               leading: Text(AccPageConstants.leading1, style: AccountStyle.leadingSize(context)),
               trailing: Text(AccPageConstants.trailing1, style: AccountStyle.trailingSize(context))),
@@ -46,8 +52,10 @@ class _AccountPageState extends State<AccountPage> {
               leading: Text(AccPageConstants.leading4, style: AccountStyle.leadingSize(context)),
               trailing: Text(AccPageConstants.trailing4, style: AccountStyle.trailingSize(context))),
           Container(
+            //* Çıkış yap butonu
             child: TextButton(
                 onPressed: () {
+                  //* Onaylama alert
                   showLogoutConfirmationDialog(context);
                 },
                 child: const Text(AccPageConstants.exitText)),

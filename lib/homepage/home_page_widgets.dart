@@ -12,6 +12,7 @@ class HelpHomeIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      color: Colors.white,
       onPressed: () {
         Navigator.pushReplacement(
             context,
@@ -33,6 +34,7 @@ class AccountHomeIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      color: Colors.white,
       onPressed: () {
         Navigator.pushReplacement(
           context,
