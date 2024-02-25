@@ -25,7 +25,7 @@
 
  ## Kurulum
 
-1.`git clone https://github.com/alperozyyurt4/BiruniQrApplication`
+1. `git clone https://github.com/alperozyyurt4/BiruniQrApplication`
 2. Projeyi klonladıktan sonra `ctrl + shift + b` tuşlarına basıp `flutter build aar`seçeneğini seçmelisiniz
 3. `flutter pub get` komutunu terminalde calıstırın
 4. Firebase kurulumu için https://firebase.google.com sitesine gidip proje kurulum adımlarını takip ediniz.
