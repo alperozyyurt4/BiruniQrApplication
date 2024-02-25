@@ -18,6 +18,15 @@
 </p>
 
 
+
 <p>
-    Giriş yapılırken öğrenci numarası kullanılır ve öğrenci numarasının sonuna otomatik olarak @st.biruni.edu.tr eklenir ve girilen öğrenci numarasının bilgileri uygulamada gözükür. Öğrenci numaraları, QR kod ile aldığı yoklamalar ve buna benzer bilgiler firebasede her kullanıcının öğrenci numarası altında saklanır. Bu sayede öğrenci numarasına göre kullanıcıya altındaki değerler getirilir. Silme işlemi yapıldığı zaman yoklaması alınan, kaydedilen ders veritabanından silinir. Veritabanında bulunan herhangi bir kullanıcı giriş yapamaz. Kullanıcı bilgileri uygulamaya giriş yapılmadığı sürece sadece veritabanında saklanır.
+    Giriş yapılırken öğrenci numarası kullanılır. Öğrenci numarasının sonuna otomatik olarak @st.biruni.edu.tr eklenir ve girilen öğrenci numarasına göre uygulama çalışır. Öğrenci numaraları, QR kod ile aldığı yoklamalar ve buna benzer bilgiler firebasede her kullanıcının öğrenci numarası altında saklanır. Bu sayede öğrenci numarasına göre kullanıcıya ait değerler getirilir. Silme işlemi yapıldığı zaman yoklaması alınan, kaydedilen ders veritabanından silinir. Veritabanında bulunmayan herhangi bir kullanıcı giriş yapamaz. Kullanıcı bilgileri uygulamaya giriş yapılmadığı sürece sadece veritabanında saklanır.
    </ p>
+
+   <h1>
+    Kurulum
+</h1>
+<p>
+    1. `kod`
+</p>
+
