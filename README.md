@@ -1,11 +1,11 @@
 <div style="display: flex;">
-    <img src="./Photos/LoginPage.png" alt="Login Page" style="padding-right: 50px; width: 20%; height: 300px;">
-    <img src="./Photos/HomePage.png" alt="Home Page" style="padding-right: 50px; width: 20%; height: 300px;">
-    <img src="./Photos/HistoryPage.png" alt="History Page" style="padding-right: 50px; width: 20%; height: 300px;">
-    <img src="./Photos/HelpPage.png" alt="Help Page" style="padding-right: 50px; width: 20%; height: 300px;">
-    <img src="./Photos/AccountPage.png" alt="Account Page" style="padding-right: 50px; width: 20%; height: 300px;">
-    <img src="./Photos/Delete.png" alt="Delete" style="padding-right: 50px; width: 20%; height: 300px;">
-    <img src="./Photos/Logout.png" alt="Logout" style="width: 20%; height: 300px;">
+    <img src="./Photos/LoginPage.png" alt="Login Page" style="padding-right: 50px; width: 20%; height: 350px;">
+    <img src="./Photos/HomePage.png" alt="Home Page" style="padding-right: 50px; width: 20%; height: 350px;">
+    <img src="./Photos/HistoryPage.png" alt="History Page" style="padding-right: 50px; width: 20%; height: 350px;">
+    <img src="./Photos/HelpPage.png" alt="Help Page" style="padding-right: 50px; width: 20%; height: 350px;">
+    <img src="./Photos/AccountPage.png" alt="Account Page" style="padding-right: 50px; width: 20%; height: 350px;">
+    <img src="./Photos/Delete.png" alt="Delete" style="padding-right: 50px; width: 20%; height: 350px;">
+    <img src="./Photos/Logout.png" alt="Logout" style="width: 20%; height: 350px;">
 </div>
 
 <h1>
