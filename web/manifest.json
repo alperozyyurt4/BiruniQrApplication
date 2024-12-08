@@ -1,6 +1,6 @@
 {
-    "name": "biruni_qr_app",
-    "short_name": "biruni_qr_app",
+    "name": "biruni_qr_application",
+    "short_name": "biruni_qr_application",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
